@@ -25,6 +25,7 @@ namespace JanelasMDI
         {
             InitializeComponent();
         }
+
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
@@ -64,13 +65,16 @@ namespace JanelasMDI
                 dr = comando.ExecuteReader();
                 
                 if(dr.HasRows)
-                {                
+                {
+                    string nome = " ";
                     string tipo = " ";
                     while (dr.Read())
                     {                    
                         tipo = Convert.ToString(dr["cargo"]);
+                        nome = Convert.ToString(dr["nomeUsuario"]);
+
                     }
-                    Frm_Principal Menu = new Frm_Principal(tipo);
+                    Frm_Principal Menu = new Frm_Principal(tipo, nome);
                     Menu.ShowDialog();
                 }
                 else

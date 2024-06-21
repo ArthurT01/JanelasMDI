@@ -15,6 +15,7 @@ namespace JanelasMDI
         public string Cep { get; set; }
         public string Rua { get; set; }
         public string Complemento { get; set; }
+        public string Unidade { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
@@ -69,29 +70,43 @@ namespace JanelasMDI
                                 Rua = valor[1].ToString();
                             }
 
-                            // Bairro
+                            //Complemento
+                            if (cont == 3)
+                            {
+                                string[] valor = substring.Split(':');
+                                Complemento = valor[1].ToString();
+                            }
+
+                            //Unidade
                             if (cont == 4)
+                            {
+                                string[] valor = substring.Split(':');
+                                Unidade = valor[1].ToString();
+                            }
+
+                            // Bairro
+                            if (cont == 5)
                             {
                                 string[] valor = substring.Split(':');
                                 Bairro = valor[1].ToString();
                             }
 
                             // Cidade
-                            if (cont == 5)
+                            if (cont == 6)
                             {
                                 string[] valor = substring.Split(':');
                                 Cidade = valor[1].ToString();
                             }
 
                             // UF
-                            if (cont == 6)
+                            if (cont == 7)
                             {
                                 string[] valor = substring.Split(':');
                                 Estado = valor[1].ToString();
                             }
 
                             // IBGE
-                            if (cont == 7)
+                            if (cont == 8)
                             {
                                 string[] valor = substring.Split(':');
                                 Ibge = valor[1].ToString();
@@ -105,14 +120,14 @@ namespace JanelasMDI
                             }
 
                             // GIA
-                            if (cont == 8)
+                            if (cont == 10)
                             {
                                 string[] valor = substring.Split(':');
                                 Gia = valor[1].ToString();
                             }
 
                             // SIAFI
-                            if (cont == 10)
+                            if (cont == 11)
                             {
                                 string[] valor = substring.Split(':');
                                 Siafi = valor[1].ToString();

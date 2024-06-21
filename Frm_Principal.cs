@@ -20,21 +20,23 @@ namespace JanelasMDI
             InitializeComponent();
         }
 
-        public Frm_Principal(string tipoUser)
+        public Frm_Principal(string tipoUser, string nomeUser)
         {
 
             InitializeComponent();      
 
-            if (tipoUser == "Coordenador")
+            if (tipoUser == "COORDENADOR")
             {
                 
             }
-            else if(tipoUser == "Atendimento")
+            else if(tipoUser == "ATENDIMENTO")
             {
                 administraçãoToolStripMenuItem.Visible = false;
                 tpCadastrarUsuarios.Visible = false;
             }
+            tpNomeUsuario.Text = "User: "+nomeUser;
         }
+
 
 
         private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -157,8 +159,11 @@ namespace JanelasMDI
         }
 
         private void maximizarTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
-        { 
-
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.WindowState = FormWindowState.Minimized;
+            }
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
@@ -170,7 +175,28 @@ namespace JanelasMDI
 
         private void mInimizarTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.WindowState = FormWindowState.Maximized;
+            }
 
+        }
+
+        private void tpFecharJanelas_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Frm_Ajuda frmajuda = new Frm_Ajuda();
+            frmajuda.MdiParent = this;
+            frmajuda.Show();
+        }
+
+        private void ocultarBarraDeFerramentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStrip1.Visible = false;
         }
     }
 }
