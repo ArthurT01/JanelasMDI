@@ -51,7 +51,6 @@
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtNumeroEndereco = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -65,6 +64,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.dtNascimento = new System.Windows.Forms.DateTimePicker();
+            this.mktNumCasa = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,14 +89,14 @@
             this.mktTelefone.Mask = "00000-0000";
             this.mktTelefone.Name = "mktTelefone";
             this.mktTelefone.Size = new System.Drawing.Size(78, 20);
-            this.mktTelefone.TabIndex = 3;
+            this.mktTelefone.TabIndex = 4;
             // 
             // txtProfissao
             // 
             this.txtProfissao.Location = new System.Drawing.Point(270, 155);
             this.txtProfissao.Name = "txtProfissao";
             this.txtProfissao.Size = new System.Drawing.Size(220, 20);
-            this.txtProfissao.TabIndex = 4;
+            this.txtProfissao.TabIndex = 2;
             // 
             // mktCpf
             // 
@@ -104,7 +104,7 @@
             this.mktCpf.Mask = "000.000.000-00";
             this.mktCpf.Name = "mktCpf";
             this.mktCpf.Size = new System.Drawing.Size(89, 20);
-            this.mktCpf.TabIndex = 9;
+            this.mktCpf.TabIndex = 6;
             // 
             // label1
             // 
@@ -183,7 +183,7 @@
             this.mktCep.Mask = "00000000";
             this.mktCep.Name = "mktCep";
             this.mktCep.Size = new System.Drawing.Size(79, 20);
-            this.mktCep.TabIndex = 17;
+            this.mktCep.TabIndex = 10;
             this.mktCep.Leave += new System.EventHandler(this.mktCep_Leave);
             // 
             // txtRua
@@ -191,7 +191,7 @@
             this.txtRua.Location = new System.Drawing.Point(528, 282);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(236, 20);
-            this.txtRua.TabIndex = 20;
+            this.txtRua.TabIndex = 15;
             // 
             // label9
             // 
@@ -208,7 +208,7 @@
             this.txtCidade.Location = new System.Drawing.Point(528, 384);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(236, 20);
-            this.txtCidade.TabIndex = 25;
+            this.txtCidade.TabIndex = 17;
             // 
             // label10
             // 
@@ -245,7 +245,7 @@
             this.txtBairro.Location = new System.Drawing.Point(528, 333);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(236, 20);
-            this.txtBairro.TabIndex = 30;
+            this.txtBairro.TabIndex = 16;
             // 
             // label13
             // 
@@ -267,19 +267,12 @@
             this.label14.TabIndex = 35;
             this.label14.Text = "País:";
             // 
-            // txtNumeroEndereco
-            // 
-            this.txtNumeroEndereco.Location = new System.Drawing.Point(270, 333);
-            this.txtNumeroEndereco.Name = "txtNumeroEndereco";
-            this.txtNumeroEndereco.Size = new System.Drawing.Size(79, 20);
-            this.txtNumeroEndereco.TabIndex = 37;
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(525, 155);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(239, 20);
-            this.txtEmail.TabIndex = 40;
+            this.txtEmail.TabIndex = 7;
             // 
             // label3
             // 
@@ -300,10 +293,10 @@
             this.btnSalvar.Location = new System.Drawing.Point(268, 368);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(110, 36);
-            this.btnSalvar.TabIndex = 45;
+            this.btnSalvar.TabIndex = 18;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // pictureBox2
             // 
@@ -350,14 +343,14 @@
             this.cbEstado.Location = new System.Drawing.Point(355, 281);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(135, 21);
-            this.cbEstado.TabIndex = 52;
+            this.cbEstado.TabIndex = 12;
             // 
             // txtPais
             // 
             this.txtPais.Location = new System.Drawing.Point(355, 333);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(135, 20);
-            this.txtPais.TabIndex = 53;
+            this.txtPais.TabIndex = 14;
             // 
             // mktDDD
             // 
@@ -365,7 +358,7 @@
             this.mktDDD.Mask = "(00)";
             this.mktDDD.Name = "mktDDD";
             this.mktDDD.Size = new System.Drawing.Size(26, 20);
-            this.mktDDD.TabIndex = 54;
+            this.mktDDD.TabIndex = 3;
             // 
             // btnLimpar
             // 
@@ -376,9 +369,10 @@
             this.btnLimpar.Location = new System.Drawing.Point(384, 368);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(106, 36);
-            this.btnLimpar.TabIndex = 55;
+            this.btnLimpar.TabIndex = 19;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // cbTipoEndereco
             // 
@@ -389,7 +383,7 @@
             this.cbTipoEndereco.Location = new System.Drawing.Point(528, 207);
             this.cbTipoEndereco.Name = "cbTipoEndereco";
             this.cbTipoEndereco.Size = new System.Drawing.Size(121, 21);
-            this.cbTipoEndereco.TabIndex = 56;
+            this.cbTipoEndereco.TabIndex = 8;
             // 
             // cbSexo
             // 
@@ -400,7 +394,7 @@
             this.cbSexo.Location = new System.Drawing.Point(659, 206);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(105, 21);
-            this.cbSexo.TabIndex = 57;
+            this.cbSexo.TabIndex = 9;
             // 
             // label15
             // 
@@ -428,7 +422,15 @@
             this.dtNascimento.Location = new System.Drawing.Point(389, 207);
             this.dtNascimento.Name = "dtNascimento";
             this.dtNascimento.Size = new System.Drawing.Size(101, 20);
-            this.dtNascimento.TabIndex = 60;
+            this.dtNascimento.TabIndex = 5;
+            // 
+            // mktNumCasa
+            // 
+            this.mktNumCasa.Location = new System.Drawing.Point(270, 333);
+            this.mktNumCasa.Mask = "0000";
+            this.mktNumCasa.Name = "mktNumCasa";
+            this.mktNumCasa.Size = new System.Drawing.Size(79, 20);
+            this.mktNumCasa.TabIndex = 13;
             // 
             // Frm_CadastrarClientes
             // 
@@ -437,6 +439,7 @@
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(798, 443);
+            this.Controls.Add(this.mktNumCasa);
             this.Controls.Add(this.dtNascimento);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -450,7 +453,6 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtNumeroEndereco);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtBairro);
@@ -508,7 +510,6 @@
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtNumeroEndereco;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSalvar;
@@ -522,5 +523,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dtNascimento;
+        private System.Windows.Forms.MaskedTextBox mktNumCasa;
     }
 }

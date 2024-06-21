@@ -65,7 +65,7 @@
             this.txtNomeCompleto.Location = new System.Drawing.Point(246, 100);
             this.txtNomeCompleto.Name = "txtNomeCompleto";
             this.txtNomeCompleto.Size = new System.Drawing.Size(213, 20);
-            this.txtNomeCompleto.TabIndex = 1;
+            this.txtNomeCompleto.TabIndex = 2;
             // 
             // label1
             // 
@@ -145,7 +145,7 @@
             this.dtNascimento.Location = new System.Drawing.Point(352, 54);
             this.dtNascimento.Name = "dtNascimento";
             this.dtNascimento.Size = new System.Drawing.Size(100, 20);
-            this.dtNascimento.TabIndex = 14;
+            this.dtNascimento.TabIndex = 1;
             // 
             // mktTelefone
             // 
@@ -153,7 +153,7 @@
             this.mktTelefone.Mask = "00000-0000";
             this.mktTelefone.Name = "mktTelefone";
             this.mktTelefone.Size = new System.Drawing.Size(69, 20);
-            this.mktTelefone.TabIndex = 15;
+            this.mktTelefone.TabIndex = 4;
             this.mktTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // mktCpfAluno
@@ -162,7 +162,7 @@
             this.mktCpfAluno.Mask = "000.000.000-00";
             this.mktCpfAluno.Name = "mktCpfAluno";
             this.mktCpfAluno.Size = new System.Drawing.Size(99, 20);
-            this.mktCpfAluno.TabIndex = 16;
+            this.mktCpfAluno.TabIndex = 7;
             // 
             // mktCpfCliente
             // 
@@ -170,7 +170,7 @@
             this.mktCpfCliente.Mask = "000.000.000-00";
             this.mktCpfCliente.Name = "mktCpfCliente";
             this.mktCpfCliente.Size = new System.Drawing.Size(102, 20);
-            this.mktCpfCliente.TabIndex = 17;
+            this.mktCpfCliente.TabIndex = 8;
             this.mktCpfCliente.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
             // 
             // label8
@@ -188,7 +188,7 @@
             this.txtEmail.Location = new System.Drawing.Point(485, 54);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(207, 20);
-            this.txtEmail.TabIndex = 19;
+            this.txtEmail.TabIndex = 6;
             // 
             // btnSalvar
             // 
@@ -199,7 +199,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(485, 138);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(99, 24);
-            this.btnSalvar.TabIndex = 20;
+            this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -221,7 +221,7 @@
             this.mktDDD.Mask = "(00)";
             this.mktDDD.Name = "mktDDD";
             this.mktDDD.Size = new System.Drawing.Size(27, 20);
-            this.mktDDD.TabIndex = 49;
+            this.mktDDD.TabIndex = 3;
             // 
             // btnLimpar
             // 
@@ -232,7 +232,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(590, 138);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(102, 24);
-            this.btnLimpar.TabIndex = 50;
+            this.btnLimpar.TabIndex = 10;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
             // 
@@ -245,7 +245,7 @@
             this.cbSexo.Location = new System.Drawing.Point(357, 140);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(102, 21);
-            this.cbSexo.TabIndex = 51;
+            this.cbSexo.TabIndex = 5;
             // 
             // Frm_CadastrarAluno
             // 

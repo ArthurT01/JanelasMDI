@@ -61,7 +61,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(200, 20);
-            this.txtEmail.TabIndex = 6;
+            this.txtEmail.TabIndex = 9;
             // 
             // label8
             // 
@@ -80,7 +80,7 @@
             this.mktCpfCliente.Name = "mktCpfCliente";
             this.mktCpfCliente.ReadOnly = true;
             this.mktCpfCliente.Size = new System.Drawing.Size(100, 20);
-            this.mktCpfCliente.TabIndex = 9;
+            this.mktCpfCliente.TabIndex = 11;
             // 
             // mktCpfAluno
             // 
@@ -89,7 +89,7 @@
             this.mktCpfAluno.Name = "mktCpfAluno";
             this.mktCpfAluno.ReadOnly = true;
             this.mktCpfAluno.Size = new System.Drawing.Size(94, 20);
-            this.mktCpfAluno.TabIndex = 8;
+            this.mktCpfAluno.TabIndex = 10;
             // 
             // mktTelefone
             // 
@@ -98,7 +98,7 @@
             this.mktTelefone.Name = "mktTelefone";
             this.mktTelefone.ReadOnly = true;
             this.mktTelefone.Size = new System.Drawing.Size(73, 20);
-            this.mktTelefone.TabIndex = 11;
+            this.mktTelefone.TabIndex = 7;
             // 
             // label7
             // 
@@ -176,7 +176,7 @@
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.ReadOnly = true;
             this.txtSexo.Size = new System.Drawing.Size(118, 20);
-            this.txtSexo.TabIndex = 5;
+            this.txtSexo.TabIndex = 4;
             // 
             // txtNome
             // 
@@ -184,7 +184,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.ReadOnly = true;
             this.txtNome.Size = new System.Drawing.Size(213, 20);
-            this.txtNome.TabIndex = 7;
+            this.txtNome.TabIndex = 5;
             // 
             // txtCodigo
             // 
@@ -192,7 +192,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(85, 20);
-            this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.TabIndex = 3;
             // 
             // mkdDataNascimento
             // 
@@ -201,7 +201,7 @@
             this.mkdDataNascimento.Name = "mkdDataNascimento";
             this.mkdDataNascimento.ReadOnly = true;
             this.mkdDataNascimento.Size = new System.Drawing.Size(107, 20);
-            this.mkdDataNascimento.TabIndex = 12;
+            this.mkdDataNascimento.TabIndex = 8;
             // 
             // pictureBox2
             // 
@@ -223,7 +223,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(572, 24);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 29);
-            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -235,7 +235,7 @@
             this.mkdDDD.Name = "mkdDDD";
             this.mkdDDD.ReadOnly = true;
             this.mkdDDD.Size = new System.Drawing.Size(25, 20);
-            this.mkdDDD.TabIndex = 10;
+            this.mkdDDD.TabIndex = 6;
             // 
             // cbTipoBusca
             // 
@@ -248,7 +248,7 @@
             this.cbTipoBusca.Location = new System.Drawing.Point(246, 32);
             this.cbTipoBusca.Name = "cbTipoBusca";
             this.cbTipoBusca.Size = new System.Drawing.Size(121, 21);
-            this.cbTipoBusca.TabIndex = 1;
+            this.cbTipoBusca.TabIndex = 0;
             this.cbTipoBusca.SelectedIndexChanged += new System.EventHandler(this.cbTipoBusca_SelectedIndexChanged);
             // 
             // label9
@@ -266,7 +266,7 @@
             this.mktBusca.Location = new System.Drawing.Point(394, 32);
             this.mktBusca.Name = "mktBusca";
             this.mktBusca.Size = new System.Drawing.Size(144, 20);
-            this.mktBusca.TabIndex = 2;
+            this.mktBusca.TabIndex = 1;
             this.mktBusca.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mktBusca_MaskInputRejected);
             // 
             // label10

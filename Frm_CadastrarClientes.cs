@@ -16,7 +16,10 @@ namespace JanelasMDI
 
         MySqlConnection conexao;
         MySqlCommand comando;
+        MySqlDataReader dr;
         string strSQL;
+        int cod;
+        int flag = 0;
 
         public Frm_CadastrarClientes()
         {
@@ -25,20 +28,35 @@ namespace JanelasMDI
 
         private void Frm_CadastrarAnimal_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            if (txtNomeCompleto.Text == null || txtEmail.Text == null || txtNumeroEndereco.Text == null || txtPais.Text == null || txtProfissao.Text == null || txtRua.Text == null || txtBairro.Text == null || txtCidade.Text == null || mktCep.MaskCompleted == false || mktCpf.MaskCompleted == false || mktDDD.MaskCompleted == false || mktTelefone.MaskCompleted == false)
+            try
             {
-                MessageBox.Show("Cadastro incompleto!");
+                conexao = new MySqlConnection("Server = localhost; Database = escola; Uid = senai; Pwd = 1234");
+                strSQL = "SELECT MAX(codigoCliente) FROM t_clientes";
+                comando = new MySqlCommand(strSQL, conexao);
+
+                conexao.Open();
+
+                dr = comando.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        cod = Convert.ToInt32(dr["MAX(codigoCliente)"]);
+                        cod += 1;
+                    }
+                    txtCodigoCliente.Text = Convert.ToString(cod);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                
-                cadastroCliente();
+                MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                conexao.Close();
+            }
+
         }
 
         private void cadastroCliente()
@@ -63,7 +81,7 @@ namespace JanelasMDI
                 comando.Parameters.AddWithValue("@bairro", txtBairro.Text);
                 comando.Parameters.AddWithValue("@cidade", txtCidade.Text);
                 comando.Parameters.AddWithValue("@estado", cbEstado.Text);
-                comando.Parameters.AddWithValue("@numCasa", txtNumeroEndereco.Text);
+                comando.Parameters.AddWithValue("@numCasa", mktNumCasa.Text);
                 comando.Parameters.AddWithValue("@país", txtPais.Text);
                 comando.Parameters.AddWithValue("@cep", Convert.ToInt64(mktCep.Text));
                 conexao.Open();
@@ -83,7 +101,6 @@ namespace JanelasMDI
             }
         }
     
-
         private void executaBuscaTratada()
         {
             string input = mktCep.Text;
@@ -126,12 +143,104 @@ namespace JanelasMDI
             }
         }
 
+        private void tratamentoDeDados()
+        {
+            string email = txtEmail.Text;
+
+            if (txtEmail.Text == null || txtNomeCompleto.Text == null || mktCpf.MaskCompleted == false || mktNumCasa.TextLength < 1 || mktDDD.MaskCompleted == false || mktTelefone.MaskCompleted == false || cbSexo.Text == null || cbTipoEndereco.Text == null || cbEstado.Text == null || txtPais.Text == null || txtProfissao.Text == null || txtRua.Text == null || txtBairro.Text == null || txtCidade.Text == null)
+            {
+                MessageBox.Show("Campo em branco ou incompleto");
+            }
+            else
+            {
+                if (!email.Contains("@") || !email.Contains(".") || email.Length < 3)
+                {
+                    MessageBox.Show("Email inválido");
+                    txtEmail.Text = "";
+                }
+                else
+                {
+                    for (int i = 0; i < 9; i++)
+                    {
+                        if (txtNomeCompleto.Text.Contains(i.ToString()))
+                        {
+                            flag++;
+                            MessageBox.Show("Não é permitido números, Verifique os seguintes campos: 'Nome', 'País', 'Profissão', 'Rua', 'Bairro' e 'Cidade'");
+                            break;
+                        }
+                    }
+                    if (flag == 1)
+                    {
+
+                    }
+                    else
+                    {
+                        List<string> caracteresEspeciais = new List<string>()
+                        {
+                            "!", "@", "#", "$", "%", "^", "&", "*", "(", ")",
+                            "-", "_", "=", "+", "[", "]", "{", "}", ";", ":",
+                            "'", "\"", "<", ">", ",", ".", "?", "/", "º", "ª",
+                            "\\", "`", "~", "|"
+                        };
+
+                        foreach (var i in caracteresEspeciais)
+                        {
+                            if (txtNomeCompleto.Text.Contains(i.ToString()))
+                            {
+                                flag++;
+                                MessageBox.Show("Não é permitido carateres especiais, Verifique os seguintes campos: 'Nome', 'País', 'Profissão', 'Rua', 'Bairro' e 'Cidade'");
+                                break;
+                            }
+                        }
+                        if (flag == 1)
+                        {
+
+                        }
+                        else
+                        {
+                            cadastroCliente();
+                        }
+                    }
+                }
+            }
+
+        }
+
+        private void limpa()
+        {
+            txtNomeCompleto.Text = "";
+            dtNascimento.Text = "";
+            mktCpf.Text = "";
+            mktCep.Text = "";
+            txtEmail.Text = "";
+            mktTelefone.Text = "";
+            mktDDD.Text = "";
+            cbSexo.Text = "";
+            mktNumCasa.Text = "";
+            txtCidade.Text = "";
+            txtBairro.Text = "";
+            txtRua.Text = "";
+            txtProfissao.Text = "";
+            txtPais.Text = "";
+        }
+
         private void mktCep_Leave(object sender, EventArgs e)
         {
             if(mktCep.MaskCompleted)
             {
                 executaBuscaTratada();
             }
+        }
+
+        private void btnSalvar_Click_1(object sender, EventArgs e)
+        {
+            flag = 0;
+            tratamentoDeDados();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limpa();
         }
     }  
 
