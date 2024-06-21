@@ -162,7 +162,7 @@ namespace JanelasMDI
                 {
                     for (int i = 0; i < 9; i++)
                     {
-                        if (txtNomeCompleto.Text.Contains(i.ToString()))
+                        if (txtNomeCompleto.Text.Contains(i.ToString()) || txtProfissao.Text.Contains(i.ToString()) || txtBairro.Text.Contains(i.ToString()) || txtCidade.Text.Contains(i.ToString()) || txtRua.Text.Contains(i.ToString()) || txtPais.Text.Contains(i.ToString()))
                         {
                             flag++;
                             MessageBox.Show("Não é permitido números, Verifique os seguintes campos: 'Nome', 'País', 'Profissão', 'Rua', 'Bairro' e 'Cidade'");
