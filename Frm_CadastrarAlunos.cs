@@ -19,6 +19,7 @@ namespace JanelasMDI
         string strSQL;
         int cod;
         int flag = 0;
+        string codCliente;
 
         public Frm_CadastrarAluno()
         {
@@ -59,7 +60,7 @@ namespace JanelasMDI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            flag = 0;
+            flag = 0;          
             tratamentoDeDados();
         }
 
@@ -68,7 +69,7 @@ namespace JanelasMDI
             try
             {
                 conexao = new MySqlConnection("Server = localhost; Database = escola; Uid = senai; Pwd = 1234");
-                strSQL = "INSERT INTO t_alunos (dataNascimentoAluno, telefoneAluno, dddAluno, generoAluno, emailAluno, nomeAluno, cpfAluno, fk_cpfCliente) VALUES (@dataNascimentoAluno, @telefoneAluno, @dddAluno, @generoAluno, @emailAluno, @nomeAluno, @cpfAluno,@fk_cpfCliente)";
+                strSQL = "INSERT INTO t_alunos (dataNascimentoAluno, telefoneAluno, dddAluno, generoAluno, emailAluno, nomeAluno, cpfAluno, fk_cpfCliente, fk_codigoCliente) VALUES (@dataNascimentoAluno, @telefoneAluno, @dddAluno, @generoAluno, @emailAluno, @nomeAluno, @cpfAluno,@fk_cpfCliente, @fk_codigoCliente)";
 
                 comando = new MySqlCommand(strSQL, conexao);
 
@@ -76,6 +77,7 @@ namespace JanelasMDI
                 comando.Parameters.AddWithValue("@emailAluno", txtEmail.Text);
                 comando.Parameters.AddWithValue("@telefoneAluno", mktTelefone.Text);
                 comando.Parameters.AddWithValue("@fk_cpfCliente", mktCpfCliente.Text);
+                comando.Parameters.AddWithValue("@fk_codigoCliente", codCliente);
                 comando.Parameters.AddWithValue("@cpfAluno", mktCpfAluno.Text);
                 comando.Parameters.AddWithValue("@dddAluno", mktDDD.Text);
                 comando.Parameters.AddWithValue("@dataNascimentoAluno", Convert.ToDateTime(dtNascimento.Text));
@@ -174,6 +176,7 @@ namespace JanelasMDI
                         }
                         else
                         {
+                            codigoCliente();
                             cadastroAluno();
                         }
                     }
@@ -182,7 +185,43 @@ namespace JanelasMDI
 
         }
 
+        private void codigoCliente()
+        {
+            try
+            {
+                conexao = new MySqlConnection("Server = localhost; Database = escola; Uid = senai; Pwd = 1234");
+                strSQL = "SELECT codigoCliente FROM t_clientes WHERE cpfCliente = @cpfCliente ";
+                comando = new MySqlCommand(strSQL, conexao);
 
+                comando.Parameters.AddWithValue("@cpfCliente", mktCpfCliente.Text);
+
+                conexao.Open();
+
+                dr = comando.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                       codCliente = Convert.ToString(dr["codigoCliente"]);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ID não encontrado no Banco de Dados");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO: " + ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+
+            }
+        }
 
         private void label7_Click(object sender, EventArgs e)
         {

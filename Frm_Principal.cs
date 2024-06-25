@@ -14,6 +14,7 @@ namespace JanelasMDI
     public partial class Frm_Principal : Form
     {
         string tipo = "";
+        int flag;
 
         public Frm_Principal()
         {
@@ -196,7 +197,15 @@ namespace JanelasMDI
 
         private void ocultarBarraDeFerramentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStrip1.Visible = false;
+            if(toolStrip1.Visible == true)
+            {
+                toolStrip1.Visible = false;
+            }
+            else
+            {
+                toolStrip1.Visible = true;
+            }
+                
         }
     }
 }

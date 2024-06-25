@@ -52,6 +52,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.mktBusca = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtNomeCliente = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.mktDddCliente = new System.Windows.Forms.MaskedTextBox();
+            this.mktTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -207,7 +212,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 46);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 76);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(200, 175);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -279,13 +284,64 @@
             this.label10.TabIndex = 95;
             this.label10.Text = "Busca:";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Location = new System.Drawing.Point(246, 234);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(113, 13);
+            this.label11.TabIndex = 96;
+            this.label11.Text = "Nome do responsável:";
+            // 
+            // txtNomeCliente
+            // 
+            this.txtNomeCliente.Location = new System.Drawing.Point(246, 250);
+            this.txtNomeCliente.Name = "txtNomeCliente";
+            this.txtNomeCliente.ReadOnly = true;
+            this.txtNomeCliente.Size = new System.Drawing.Size(200, 20);
+            this.txtNomeCliente.TabIndex = 97;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Location = new System.Drawing.Point(472, 234);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(52, 13);
+            this.label13.TabIndex = 99;
+            this.label13.Text = "Telefone:";
+            // 
+            // mktDddCliente
+            // 
+            this.mktDddCliente.Location = new System.Drawing.Point(472, 250);
+            this.mktDddCliente.Mask = "(00)";
+            this.mktDddCliente.Name = "mktDddCliente";
+            this.mktDddCliente.ReadOnly = true;
+            this.mktDddCliente.Size = new System.Drawing.Size(25, 20);
+            this.mktDddCliente.TabIndex = 100;
+            // 
+            // mktTelefoneCliente
+            // 
+            this.mktTelefoneCliente.Location = new System.Drawing.Point(499, 250);
+            this.mktTelefoneCliente.Mask = "00000-0000";
+            this.mktTelefoneCliente.Name = "mktTelefoneCliente";
+            this.mktTelefoneCliente.ReadOnly = true;
+            this.mktTelefoneCliente.Size = new System.Drawing.Size(94, 20);
+            this.mktTelefoneCliente.TabIndex = 101;
+            // 
             // Frm_BuscarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(691, 257);
+            this.ClientSize = new System.Drawing.Size(691, 301);
+            this.Controls.Add(this.mktTelefoneCliente);
+            this.Controls.Add(this.mktDddCliente);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtNomeCliente);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.mktBusca);
             this.Controls.Add(this.label9);
@@ -344,5 +400,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox mktBusca;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtNomeCliente;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.MaskedTextBox mktDddCliente;
+        private System.Windows.Forms.MaskedTextBox mktTelefoneCliente;
     }
 }

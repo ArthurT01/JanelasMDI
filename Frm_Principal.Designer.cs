@@ -60,14 +60,14 @@
             this.ajudaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tpNomeUsuario = new System.Windows.Forms.ToolStripTextBox();
+            this.exibirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ocultarBarraDeFerramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tpCadastrarUsuarios = new System.Windows.Forms.ToolStripButton();
             this.tpListarCadastros = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.tpNomeUsuario = new System.Windows.Forms.ToolStripTextBox();
-            this.exibirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ocultarBarraDeFerramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -332,6 +332,30 @@
             this.sobreToolStripMenuItem.Text = " Sobre o Sistema";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
+            // tpNomeUsuario
+            // 
+            this.tpNomeUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tpNomeUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpNomeUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tpNomeUsuario.Name = "tpNomeUsuario";
+            this.tpNomeUsuario.ReadOnly = true;
+            this.tpNomeUsuario.Size = new System.Drawing.Size(100, 23);
+            // 
+            // exibirToolStripMenuItem
+            // 
+            this.exibirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ocultarBarraDeFerramentasToolStripMenuItem});
+            this.exibirToolStripMenuItem.Name = "exibirToolStripMenuItem";
+            this.exibirToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
+            this.exibirToolStripMenuItem.Text = "Exibir";
+            // 
+            // ocultarBarraDeFerramentasToolStripMenuItem
+            // 
+            this.ocultarBarraDeFerramentasToolStripMenuItem.Name = "ocultarBarraDeFerramentasToolStripMenuItem";
+            this.ocultarBarraDeFerramentasToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.ocultarBarraDeFerramentasToolStripMenuItem.Text = "Ocultar Barra de Ferramentas";
+            this.ocultarBarraDeFerramentasToolStripMenuItem.Click += new System.EventHandler(this.ocultarBarraDeFerramentasToolStripMenuItem_Click);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.SteelBlue;
@@ -400,30 +424,6 @@
             this.toolStripButton5.Size = new System.Drawing.Size(38, 40);
             this.toolStripButton5.Text = "Ajuda";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
-            // 
-            // tpNomeUsuario
-            // 
-            this.tpNomeUsuario.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.tpNomeUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tpNomeUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tpNomeUsuario.Name = "tpNomeUsuario";
-            this.tpNomeUsuario.ReadOnly = true;
-            this.tpNomeUsuario.Size = new System.Drawing.Size(100, 23);
-            // 
-            // exibirToolStripMenuItem
-            // 
-            this.exibirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ocultarBarraDeFerramentasToolStripMenuItem});
-            this.exibirToolStripMenuItem.Name = "exibirToolStripMenuItem";
-            this.exibirToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
-            this.exibirToolStripMenuItem.Text = "Exibir";
-            // 
-            // ocultarBarraDeFerramentasToolStripMenuItem
-            // 
-            this.ocultarBarraDeFerramentasToolStripMenuItem.Name = "ocultarBarraDeFerramentasToolStripMenuItem";
-            this.ocultarBarraDeFerramentasToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.ocultarBarraDeFerramentasToolStripMenuItem.Text = "Ocultar Barra de Ferramentas";
-            this.ocultarBarraDeFerramentasToolStripMenuItem.Click += new System.EventHandler(this.ocultarBarraDeFerramentasToolStripMenuItem_Click);
             // 
             // Frm_Principal
             // 
