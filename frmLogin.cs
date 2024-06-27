@@ -101,6 +101,10 @@ namespace JanelasMDI
 
         }
 
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }

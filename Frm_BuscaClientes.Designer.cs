@@ -71,7 +71,9 @@
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.cbTipoBusca = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.picSair = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
             this.SuspendLayout();
             // 
             // label18
@@ -472,6 +474,17 @@
             this.label17.TabIndex = 129;
             this.label17.Text = "Tipo da Busca:";
             // 
+            // picSair
+            // 
+            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
+            this.picSair.Location = new System.Drawing.Point(5, 4);
+            this.picSair.Name = "picSair";
+            this.picSair.Size = new System.Drawing.Size(34, 31);
+            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSair.TabIndex = 130;
+            this.picSair.TabStop = false;
+            this.picSair.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Frm_BuscaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,6 +492,7 @@
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(818, 398);
+            this.Controls.Add(this.picSair);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.cbTipoBusca);
             this.Controls.Add(this.txtEstado);
@@ -524,6 +538,7 @@
             this.Text = "Busca de Clientes";
             this.Load += new System.EventHandler(this.Frm_BuscaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,5 +586,6 @@
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.ComboBox cbTipoBusca;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox picSair;
     }
 }

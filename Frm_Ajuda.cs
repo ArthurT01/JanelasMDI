@@ -56,5 +56,10 @@ namespace JanelasMDI
                 label2.Text = "Um formulário ou tela inicial que apresenta opções principais para o usuário, servindo como ponto de entrada para diferentes \nfuncionalidades do sistema, como cadastro, busca ou listagem de dados específicos.";
             }
         }
+
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

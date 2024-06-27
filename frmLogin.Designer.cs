@@ -36,7 +36,9 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.chkExibirSenha = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picSair = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEntrar
@@ -111,12 +113,24 @@
             this.pictureBox2.TabIndex = 49;
             this.pictureBox2.TabStop = false;
             // 
+            // picSair
+            // 
+            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
+            this.picSair.Location = new System.Drawing.Point(6, 5);
+            this.picSair.Name = "picSair";
+            this.picSair.Size = new System.Drawing.Size(34, 31);
+            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSair.TabIndex = 131;
+            this.picSair.TabStop = false;
+            this.picSair.Click += new System.EventHandler(this.picSair_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(282, 254);
+            this.Controls.Add(this.picSair);
             this.Controls.Add(this.chkExibirSenha);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtLogin);
@@ -129,6 +143,7 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,5 +158,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.CheckBox chkExibirSenha;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picSair;
     }
 }

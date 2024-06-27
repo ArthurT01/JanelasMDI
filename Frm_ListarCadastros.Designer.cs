@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ListarCadastros));
             this.dtListarCadastros = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.picSair = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtListarCadastros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
             this.SuspendLayout();
             // 
             // dtListarCadastros
@@ -52,6 +54,18 @@
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 1;
             // 
+            // picSair
+            // 
+            this.picSair.BackColor = System.Drawing.Color.White;
+            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
+            this.picSair.Location = new System.Drawing.Point(6, 408);
+            this.picSair.Name = "picSair";
+            this.picSair.Size = new System.Drawing.Size(34, 31);
+            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSair.TabIndex = 131;
+            this.picSair.TabStop = false;
+            this.picSair.Click += new System.EventHandler(this.picSair_Click);
+            // 
             // Frm_ListarCadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -59,11 +73,13 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 446);
+            this.Controls.Add(this.picSair);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtListarCadastros);
             this.Name = "Frm_ListarCadastros";
             this.Text = "Listar Cadastros";
             ((System.ComponentModel.ISupportInitialize)(this.dtListarCadastros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,5 +89,6 @@
 
         private System.Windows.Forms.DataGridView dtListarCadastros;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox picSair;
     }
 }

@@ -65,7 +65,9 @@
             this.label16 = new System.Windows.Forms.Label();
             this.dtNascimento = new System.Windows.Forms.DateTimePicker();
             this.mktNumCasa = new System.Windows.Forms.MaskedTextBox();
+            this.picSair = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCodigoCliente
@@ -432,6 +434,17 @@
             this.mktNumCasa.Size = new System.Drawing.Size(79, 20);
             this.mktNumCasa.TabIndex = 13;
             // 
+            // picSair
+            // 
+            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
+            this.picSair.Location = new System.Drawing.Point(7, 6);
+            this.picSair.Name = "picSair";
+            this.picSair.Size = new System.Drawing.Size(34, 31);
+            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSair.TabIndex = 131;
+            this.picSair.TabStop = false;
+            this.picSair.Click += new System.EventHandler(this.picSair_Click);
+            // 
             // Frm_CadastrarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,6 +452,7 @@
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(798, 443);
+            this.Controls.Add(this.picSair);
             this.Controls.Add(this.mktNumCasa);
             this.Controls.Add(this.dtNascimento);
             this.Controls.Add(this.label16);
@@ -481,6 +495,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_CadastrarAnimal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,5 +539,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.DateTimePicker dtNascimento;
         private System.Windows.Forms.MaskedTextBox mktNumCasa;
+        private System.Windows.Forms.PictureBox picSair;
     }
 }

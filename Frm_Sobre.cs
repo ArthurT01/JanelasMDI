@@ -17,7 +17,7 @@ namespace JanelasMDI
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void picSair_Click(object sender, EventArgs e)
         {
             this.Close();
         }

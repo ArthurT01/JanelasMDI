@@ -37,7 +37,9 @@
             this.cbCargo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.picSair = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSenha
@@ -123,6 +125,17 @@
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // picSair
+            // 
+            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
+            this.picSair.Location = new System.Drawing.Point(6, 5);
+            this.picSair.Name = "picSair";
+            this.picSair.Size = new System.Drawing.Size(34, 31);
+            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSair.TabIndex = 131;
+            this.picSair.TabStop = false;
+            this.picSair.Click += new System.EventHandler(this.picSair_Click);
+            // 
             // Frm_CadastrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -130,6 +143,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(405, 282);
+            this.Controls.Add(this.picSair);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbCargo);
@@ -142,6 +156,7 @@
             this.Text = "Cadastro de Usuários";
             this.Load += new System.EventHandler(this.Frm_CadastrarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +171,6 @@
         private System.Windows.Forms.ComboBox cbCargo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.PictureBox picSair;
     }
 }

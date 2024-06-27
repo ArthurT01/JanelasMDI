@@ -49,7 +49,9 @@
             this.mktDDD = new System.Windows.Forms.MaskedTextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.picSair = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCodigoAluno
@@ -247,6 +249,17 @@
             this.cbSexo.Size = new System.Drawing.Size(102, 21);
             this.cbSexo.TabIndex = 5;
             // 
+            // picSair
+            // 
+            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
+            this.picSair.Location = new System.Drawing.Point(5, 5);
+            this.picSair.Name = "picSair";
+            this.picSair.Size = new System.Drawing.Size(34, 31);
+            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSair.TabIndex = 131;
+            this.picSair.TabStop = false;
+            this.picSair.Click += new System.EventHandler(this.picSair_Click);
+            // 
             // Frm_CadastrarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +267,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(713, 205);
+            this.Controls.Add(this.picSair);
             this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.mktDDD);
@@ -279,6 +293,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_AgendarConsulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +321,6 @@
         private System.Windows.Forms.MaskedTextBox mktDDD;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.ComboBox cbSexo;
+        private System.Windows.Forms.PictureBox picSair;
     }
 }

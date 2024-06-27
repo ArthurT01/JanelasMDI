@@ -199,7 +199,7 @@ namespace JanelasMDI
                 conexao.Open();
 
                 dr = comando.ExecuteReader();
-
+                 
                 if (dr.HasRows)
                 {
                     while (dr.Read())
@@ -238,7 +238,7 @@ namespace JanelasMDI
             try
             {
                 conexao = new MySqlConnection("Server = localhost; Database = escola; Uid = senai; Pwd = 1234");
-                strSQL = "SELECT nomeCliente, telefoneCliente, dddCliente FROM t_clientes WHERE cpfCliente = @cpfCliente";
+                strSQL = "SELECT nomeCliente, telefoneCliente, dddCliente FROM t_clientes join t_alunos on t_clientes.cpfCliente = @cpfCliente";
                 comando = new MySqlCommand(strSQL, conexao);
 
                 comando.Parameters.AddWithValue("@cpfCliente", mktCpfCliente.Text);
@@ -288,6 +288,11 @@ namespace JanelasMDI
             {
                 mktBusca.Mask = "0000";
             }
+        }
+
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

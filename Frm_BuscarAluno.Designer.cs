@@ -57,7 +57,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.mktDddCliente = new System.Windows.Forms.MaskedTextBox();
             this.mktTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
+            this.picSair = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -330,6 +332,17 @@
             this.mktTelefoneCliente.Size = new System.Drawing.Size(94, 20);
             this.mktTelefoneCliente.TabIndex = 101;
             // 
+            // picSair
+            // 
+            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
+            this.picSair.Location = new System.Drawing.Point(7, 8);
+            this.picSair.Name = "picSair";
+            this.picSair.Size = new System.Drawing.Size(34, 31);
+            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSair.TabIndex = 131;
+            this.picSair.TabStop = false;
+            this.picSair.Click += new System.EventHandler(this.picSair_Click);
+            // 
             // Frm_BuscarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,6 +350,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(691, 301);
+            this.Controls.Add(this.picSair);
             this.Controls.Add(this.mktTelefoneCliente);
             this.Controls.Add(this.mktDddCliente);
             this.Controls.Add(this.label13);
@@ -371,6 +385,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_BuscarAluno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,5 +420,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MaskedTextBox mktDddCliente;
         private System.Windows.Forms.MaskedTextBox mktTelefoneCliente;
+        private System.Windows.Forms.PictureBox picSair;
     }
 }

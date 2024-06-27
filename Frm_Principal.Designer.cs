@@ -410,6 +410,7 @@
             this.toolStripButton1.Padding = new System.Windows.Forms.Padding(2);
             this.toolStripButton1.Size = new System.Drawing.Size(38, 40);
             this.toolStripButton1.Text = "Fechar Programa";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
             // 
             // toolStripButton5
             // 

@@ -78,5 +78,10 @@ namespace JanelasMDI
             valorCriptografado = c.CriptografarSenha(txtSenha.Text);
            
         }
+
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

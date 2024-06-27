@@ -243,5 +243,9 @@ namespace JanelasMDI
 
         }
 
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

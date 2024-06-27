@@ -42,24 +42,18 @@ namespace JanelasMDI
 
         private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_CadastrarClientes frmcadcli = new Frm_CadastrarClientes();
-            frmcadcli.MdiParent = this;
-            frmcadcli.Show(); 
+            cadastrarClientes();
         }
 
 
         private void ajudaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Frm_Ajuda frmajuda = new Frm_Ajuda();
-            frmajuda.MdiParent = this;
-            frmajuda.Show();
+            ajuda();
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Sobre frmsobre = new Frm_Sobre();
-            //frmsobre.MdiParent= this;
-            frmsobre.Show();
+            sobre();
         }
 
         private void organizarNaHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,39 +86,27 @@ namespace JanelasMDI
 
         private void listarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tipo = "CLIENTES";
-            Frm_ListarCadastros frm_ListarClientes =  new Frm_ListarCadastros(tipo);
-            frm_ListarClientes.MdiParent = this;
-            frm_ListarClientes.Show();
+            listarClientes();
         }
 
         private void buscarClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {           
-            Frm_BuscaClientes frmbuscaCli = new Frm_BuscaClientes();
-            frmbuscaCli.MdiParent = this;
-            frmbuscaCli.Show();
+        {
+            buscaClientes();
         }
 
         private void cadastrarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_CadastrarAluno frmCadAluno = new Frm_CadastrarAluno();
-            frmCadAluno.MdiParent = this;
-            frmCadAluno.Show();
+            cadastrarAlunos();
         }
 
         private void listarAlunosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tipo = "ALUNOS";
-            Frm_ListarCadastros frm_ListarClientes = new Frm_ListarCadastros(tipo);
-            frm_ListarClientes.MdiParent = this;
-            frm_ListarClientes.Show();
+            listarAlunos();
         }
 
         private void buscarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_BuscarAluno frmBuscaAlu = new Frm_BuscarAluno();
-            frmBuscaAlu.MdiParent = this;
-            frmBuscaAlu.Show();
+            buscaAlunos();   
         }
 
         private void agendarAtendimentoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -139,24 +121,17 @@ namespace JanelasMDI
 
         private void cadastrarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_CadastrarUsuario frmcadUsu = new Frm_CadastrarUsuario();
-            frmcadUsu.MdiParent = this;
-            frmcadUsu.Show();
+            cadastrarUsers();
         }
 
         private void vizualizarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tipo = "USER";
-            Frm_ListarCadastros frm_ListarClientes = new Frm_ListarCadastros(tipo);
-            frm_ListarClientes.MdiParent = this;
-            frm_ListarClientes.Show();
+            listarUsuarios();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Frm_CadastrarAluno frmcadAlu = new Frm_CadastrarAluno();
-            frmcadAlu.MdiParent = this;
-            frmcadAlu.Show();
+            cadastrarAlunos();
         }
 
         private void maximizarTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -169,9 +144,7 @@ namespace JanelasMDI
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            Frm_BuscarAluno frmBuscaAlu = new Frm_BuscarAluno();
-            frmBuscaAlu.MdiParent = this;
-            frmBuscaAlu.Show();
+            buscaAlunos();
         }
 
         private void mInimizarTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -190,9 +163,7 @@ namespace JanelasMDI
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            Frm_Ajuda frmajuda = new Frm_Ajuda();
-            frmajuda.MdiParent = this;
-            frmajuda.Show();
+            ajuda();
         }
 
         private void ocultarBarraDeFerramentasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -207,5 +178,86 @@ namespace JanelasMDI
             }
                 
         }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void listarClientes()
+        {
+            tipo = "CLIENTES";
+            Frm_ListarCadastros frm_ListarClientes = new Frm_ListarCadastros(tipo);
+            frm_ListarClientes.MdiParent = this;
+            frm_ListarClientes.Show();
+        }
+
+        private void listarAlunos()
+        {
+            tipo = "ALUNOS";
+            Frm_ListarCadastros frm_ListarClientes = new Frm_ListarCadastros(tipo);
+            frm_ListarClientes.MdiParent = this;
+            frm_ListarClientes.Show();
+        }
+
+        private void listarUsuarios()
+        {
+            tipo = "USER";
+            Frm_ListarCadastros frm_ListarClientes = new Frm_ListarCadastros(tipo);
+            frm_ListarClientes.MdiParent = this;
+            frm_ListarClientes.Show();
+        }
+
+        private void cadastrarUsers()
+        {
+            Frm_CadastrarUsuario frmcadUsu = new Frm_CadastrarUsuario();
+            frmcadUsu.MdiParent = this;
+            frmcadUsu.Show();
+        }
+
+        private void cadastrarClientes()
+        {
+            Frm_CadastrarClientes frmcadcli = new Frm_CadastrarClientes();
+            frmcadcli.MdiParent = this;
+            frmcadcli.Show();
+        }
+
+        private void cadastrarAlunos()
+        {
+            Frm_CadastrarAluno frmCadAluno = new Frm_CadastrarAluno();
+            frmCadAluno.MdiParent = this;
+            frmCadAluno.Show();
+        }
+
+        private void buscaClientes()
+        {
+            Frm_BuscaClientes frmbuscaCli = new Frm_BuscaClientes();
+            frmbuscaCli.MdiParent = this;
+            frmbuscaCli.Show();
+        }
+
+        private void buscaAlunos()
+        {
+            Frm_BuscarAluno frmBuscaAlu = new Frm_BuscarAluno();
+            frmBuscaAlu.MdiParent = this;
+            frmBuscaAlu.Show();
+        }
+
+        private void sobre()
+        {
+            Frm_Sobre frmsobre = new Frm_Sobre();
+            //frmsobre.MdiParent= this;
+            frmsobre.Show();
+        }
+
+        private void ajuda()
+        {
+            Frm_Ajuda frmajuda = new Frm_Ajuda();
+            frmajuda.MdiParent = this;
+            frmajuda.Show();
+        }
+        
+        
     }
 }

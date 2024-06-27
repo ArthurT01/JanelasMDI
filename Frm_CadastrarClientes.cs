@@ -242,6 +242,11 @@ namespace JanelasMDI
         {
             limpa();
         }
+
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }  
 
 }

@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnBusca = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.picSair = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).BeginInit();
             this.SuspendLayout();
             // 
             // cbEscolha
@@ -84,6 +86,18 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Ajuda:";
             // 
+            // picSair
+            // 
+            this.picSair.BackColor = System.Drawing.Color.Transparent;
+            this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
+            this.picSair.Location = new System.Drawing.Point(7, 8);
+            this.picSair.Name = "picSair";
+            this.picSair.Size = new System.Drawing.Size(34, 31);
+            this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSair.TabIndex = 131;
+            this.picSair.TabStop = false;
+            this.picSair.Click += new System.EventHandler(this.picSair_Click);
+            // 
             // Frm_Ajuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +105,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(784, 353);
+            this.Controls.Add(this.picSair);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBusca);
             this.Controls.Add(this.label1);
@@ -98,6 +113,7 @@
             this.Name = "Frm_Ajuda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ajuda ";
+            ((System.ComponentModel.ISupportInitialize)(this.picSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +125,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBusca;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picSair;
     }
 }
