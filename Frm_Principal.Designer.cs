@@ -65,9 +65,15 @@
             this.ocultarBarraDeFerramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tpCadastrarUsuarios = new System.Windows.Forms.ToolStripButton();
-            this.tpListarCadastros = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.tpCadastararAlunos = new System.Windows.Forms.ToolStripButton();
+            this.tpCadastroCliente = new System.Windows.Forms.ToolStripButton();
+            this.tpBuscaAlunos = new System.Windows.Forms.ToolStripButton();
+            this.tpBuscaCliente = new System.Windows.Forms.ToolStripButton();
+            this.tpListarUsuarios = new System.Windows.Forms.ToolStripButton();
+            this.tpListarAlunos = new System.Windows.Forms.ToolStripButton();
+            this.tpListarClientes = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -362,9 +368,15 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tpCadastrarUsuarios,
-            this.tpListarCadastros,
             this.toolStripButton1,
-            this.toolStripButton5});
+            this.toolStripButton5,
+            this.tpCadastararAlunos,
+            this.tpCadastroCliente,
+            this.tpBuscaAlunos,
+            this.tpBuscaCliente,
+            this.tpListarUsuarios,
+            this.tpListarAlunos,
+            this.tpListarClientes});
             this.toolStrip1.Location = new System.Drawing.Point(0, 27);
             this.toolStrip1.Margin = new System.Windows.Forms.Padding(2);
             this.toolStrip1.Name = "toolStrip1";
@@ -374,7 +386,7 @@
             // 
             // tpCadastrarUsuarios
             // 
-            this.tpCadastrarUsuarios.BackColor = System.Drawing.Color.White;
+            this.tpCadastrarUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.tpCadastrarUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.tpCadastrarUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("tpCadastrarUsuarios.Image")));
             this.tpCadastrarUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -385,23 +397,10 @@
             this.tpCadastrarUsuarios.Text = "Cadastro de Usuários";
             this.tpCadastrarUsuarios.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // tpListarCadastros
-            // 
-            this.tpListarCadastros.BackColor = System.Drawing.Color.White;
-            this.tpListarCadastros.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tpListarCadastros.Image = ((System.Drawing.Image)(resources.GetObject("tpListarCadastros.Image")));
-            this.tpListarCadastros.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tpListarCadastros.Margin = new System.Windows.Forms.Padding(2);
-            this.tpListarCadastros.Name = "tpListarCadastros";
-            this.tpListarCadastros.Padding = new System.Windows.Forms.Padding(2);
-            this.tpListarCadastros.Size = new System.Drawing.Size(38, 40);
-            this.tpListarCadastros.Text = "Listar Cadastros";
-            this.tpListarCadastros.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.BackColor = System.Drawing.Color.White;
+            this.toolStripButton1.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -415,7 +414,7 @@
             // toolStripButton5
             // 
             this.toolStripButton5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton5.BackColor = System.Drawing.Color.White;
+            this.toolStripButton5.BackColor = System.Drawing.Color.Transparent;
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -425,6 +424,87 @@
             this.toolStripButton5.Size = new System.Drawing.Size(38, 40);
             this.toolStripButton5.Text = "Ajuda";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // tpCadastararAlunos
+            // 
+            this.tpCadastararAlunos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tpCadastararAlunos.Image = ((System.Drawing.Image)(resources.GetObject("tpCadastararAlunos.Image")));
+            this.tpCadastararAlunos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tpCadastararAlunos.Name = "tpCadastararAlunos";
+            this.tpCadastararAlunos.Padding = new System.Windows.Forms.Padding(2);
+            this.tpCadastararAlunos.Size = new System.Drawing.Size(38, 41);
+            this.tpCadastararAlunos.Text = "toolStripButton2";
+            this.tpCadastararAlunos.ToolTipText = "Cadastro de Alunos";
+            this.tpCadastararAlunos.Click += new System.EventHandler(this.tpCadastararAlunos_Click);
+            // 
+            // tpCadastroCliente
+            // 
+            this.tpCadastroCliente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tpCadastroCliente.Image = ((System.Drawing.Image)(resources.GetObject("tpCadastroCliente.Image")));
+            this.tpCadastroCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tpCadastroCliente.Name = "tpCadastroCliente";
+            this.tpCadastroCliente.Padding = new System.Windows.Forms.Padding(2);
+            this.tpCadastroCliente.Size = new System.Drawing.Size(38, 41);
+            this.tpCadastroCliente.Text = "toolStripButton2";
+            this.tpCadastroCliente.ToolTipText = "Cadastro de Clientes";
+            this.tpCadastroCliente.Click += new System.EventHandler(this.tpCadastroCliente_Click);
+            // 
+            // tpBuscaAlunos
+            // 
+            this.tpBuscaAlunos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tpBuscaAlunos.Image = ((System.Drawing.Image)(resources.GetObject("tpBuscaAlunos.Image")));
+            this.tpBuscaAlunos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tpBuscaAlunos.Name = "tpBuscaAlunos";
+            this.tpBuscaAlunos.Padding = new System.Windows.Forms.Padding(2);
+            this.tpBuscaAlunos.Size = new System.Drawing.Size(38, 41);
+            this.tpBuscaAlunos.Text = "toolStripButton2";
+            this.tpBuscaAlunos.ToolTipText = "Busca de Alunos";
+            this.tpBuscaAlunos.Click += new System.EventHandler(this.tpBuscaAlunos_Click);
+            // 
+            // tpBuscaCliente
+            // 
+            this.tpBuscaCliente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tpBuscaCliente.Image = ((System.Drawing.Image)(resources.GetObject("tpBuscaCliente.Image")));
+            this.tpBuscaCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tpBuscaCliente.Name = "tpBuscaCliente";
+            this.tpBuscaCliente.Padding = new System.Windows.Forms.Padding(2);
+            this.tpBuscaCliente.Size = new System.Drawing.Size(38, 41);
+            this.tpBuscaCliente.Text = "toolStripButton2";
+            this.tpBuscaCliente.ToolTipText = "Busca de Clientes";
+            this.tpBuscaCliente.Click += new System.EventHandler(this.tpBuscaCliente_Click);
+            // 
+            // tpListarUsuarios
+            // 
+            this.tpListarUsuarios.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tpListarUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("tpListarUsuarios.Image")));
+            this.tpListarUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tpListarUsuarios.Name = "tpListarUsuarios";
+            this.tpListarUsuarios.Padding = new System.Windows.Forms.Padding(2);
+            this.tpListarUsuarios.Size = new System.Drawing.Size(38, 41);
+            this.tpListarUsuarios.Text = "toolStripButton2";
+            this.tpListarUsuarios.Click += new System.EventHandler(this.tpListarUsuarios_Click);
+            // 
+            // tpListarAlunos
+            // 
+            this.tpListarAlunos.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tpListarAlunos.Image = ((System.Drawing.Image)(resources.GetObject("tpListarAlunos.Image")));
+            this.tpListarAlunos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tpListarAlunos.Name = "tpListarAlunos";
+            this.tpListarAlunos.Padding = new System.Windows.Forms.Padding(2);
+            this.tpListarAlunos.Size = new System.Drawing.Size(38, 41);
+            this.tpListarAlunos.Text = "toolStripButton3";
+            this.tpListarAlunos.Click += new System.EventHandler(this.tpListarAlunos_Click);
+            // 
+            // tpListarClientes
+            // 
+            this.tpListarClientes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tpListarClientes.Image = ((System.Drawing.Image)(resources.GetObject("tpListarClientes.Image")));
+            this.tpListarClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tpListarClientes.Name = "tpListarClientes";
+            this.tpListarClientes.Padding = new System.Windows.Forms.Padding(2);
+            this.tpListarClientes.Size = new System.Drawing.Size(38, 41);
+            this.tpListarClientes.Text = "toolStripButton4";
+            this.tpListarClientes.Click += new System.EventHandler(this.tpListarClientes_Click);
             // 
             // Frm_Principal
             // 
@@ -484,12 +564,18 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem agendarAtendimentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarAtendimentosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton tpListarCadastros;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripTextBox tpNomeUsuario;
         private System.Windows.Forms.ToolStripMenuItem exibirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ocultarBarraDeFerramentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tpCadastararAlunos;
+        private System.Windows.Forms.ToolStripButton tpCadastroCliente;
+        private System.Windows.Forms.ToolStripButton tpBuscaAlunos;
+        private System.Windows.Forms.ToolStripButton tpBuscaCliente;
+        private System.Windows.Forms.ToolStripButton tpListarUsuarios;
+        private System.Windows.Forms.ToolStripButton tpListarAlunos;
+        private System.Windows.Forms.ToolStripButton tpListarClientes;
     }
 }
 
