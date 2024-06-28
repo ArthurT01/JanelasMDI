@@ -23,21 +23,8 @@ namespace JanelasMDI
             InitializeComponent();
         }
 
-        private void Frm_BuscaClientes_Load(object sender, EventArgs e)
-        {
-          
-        }
 
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
+        //BOTÔES 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (cbTipoBusca.Text == "CÓDIGO")
@@ -50,6 +37,19 @@ namespace JanelasMDI
             }
         }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limpa();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+        //MÉTODOS
         private void buscaCpf()
         {
             try
@@ -162,18 +162,6 @@ namespace JanelasMDI
             }
         }
 
-        private void cbTipoBusca_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbTipoBusca.Text == "CPF")
-            {
-                mktBusca.Mask = "000.000.000-00";
-            }
-            else
-            {
-                mktBusca.Mask = "0000";
-            }
-        }
-
         private void limpa()
         {
             txtNomeCompleto.Text = "";
@@ -195,14 +183,37 @@ namespace JanelasMDI
             mktCep.Text = "";
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+
+
+        //TIPO DE BUSCA
+        private void cbTipoBusca_SelectedIndexChanged(object sender, EventArgs e)
         {
-            limpa();
+            if (cbTipoBusca.Text == "CPF")
+            {
+                mktBusca.Mask = "000.000.000-00";
+            }
+            else
+            {
+                mktBusca.Mask = "0000";
+            }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+
+
+        //NÂO ESTÁ EM USO
+        private void Frm_BuscaClientes_Load(object sender, EventArgs e)
         {
-            this.Close();
+
         }
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
     }
 }

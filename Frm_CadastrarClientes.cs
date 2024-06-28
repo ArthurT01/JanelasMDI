@@ -59,6 +59,28 @@ namespace JanelasMDI
 
         }
 
+
+        //BOTÕES 
+        private void btnSalvar_Click_1(object sender, EventArgs e)
+        {
+            flag = 0;
+            tratamentoDeDados();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limpa();
+        }
+
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+
+        //MÉTODOS
         private void cadastroCliente()
         {
             try
@@ -224,6 +246,8 @@ namespace JanelasMDI
             txtPais.Text = "";
         }
 
+
+        //BUSCA CEP
         private void mktCep_Leave(object sender, EventArgs e)
         {
             if(mktCep.MaskCompleted)
@@ -232,21 +256,9 @@ namespace JanelasMDI
             }
         }
 
-        private void btnSalvar_Click_1(object sender, EventArgs e)
-        {
-            flag = 0;
-            tratamentoDeDados();
-        }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            limpa();
-        }
 
-        private void picSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+      
     }  
 
 }

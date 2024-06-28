@@ -34,18 +34,15 @@ namespace JanelasMDI
             {
                 administraçãoToolStripMenuItem.Visible = false;
                 tpCadastrarUsuarios.Visible = false;
+                tpListarUsuarios.Visible = false;  
             }
             tpNomeUsuario.Text = "User: "+nomeUser;
         }
 
 
 
-        private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            cadastrarClientes();
-        }
-
-
+      
+        //AJUDA
         private void ajudaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ajuda();
@@ -56,6 +53,10 @@ namespace JanelasMDI
             sobre();
         }
 
+
+
+
+        //JANELA
         private void organizarNaHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileHorizontal);
@@ -84,6 +85,47 @@ namespace JanelasMDI
             }
         }
 
+        private void maximizarTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void mInimizarTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                f.WindowState = FormWindowState.Maximized;
+            }
+
+        }
+
+
+
+
+        //ADMNISTRAÇÃO
+        private void cadastrarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cadastrarUsers();
+        }
+
+        //listar usuários
+        private void vizualizarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listarUsuarios();
+        }
+
+
+
+
+        //SISTEMA
+        private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cadastrarClientes();
+        }
+
         private void listarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             listarClientes();
@@ -106,66 +148,19 @@ namespace JanelasMDI
 
         private void buscarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            buscaAlunos();   
+            buscaAlunos();
         }
 
-        private void agendarAtendimentoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void visualizarAtendimentosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cadastrarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            cadastrarUsers();
-        }
-
-        private void vizualizarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            listarUsuarios();
-        }
-
+        //cadastrar alunos
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             cadastrarAlunos();
         }
 
-        private void maximizarTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form f in this.MdiChildren)
-            {
-                f.WindowState = FormWindowState.Maximized;
-            }
-        }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
-        {
-            buscaAlunos();
-        }
 
-        private void mInimizarTodasAsJanelasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form f in this.MdiChildren)
-            {
-                f.WindowState = FormWindowState.Maximized;
-            }
-
-        }
-
-        private void tpFecharJanelas_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void toolStripButton5_Click(object sender, EventArgs e)
-        {
-            ajuda();
-        }
-
+   
+        //EXIBIR
         private void ocultarBarraDeFerramentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(toolStrip1.Visible == true)
@@ -179,12 +174,10 @@ namespace JanelasMDI
                 
         }
 
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       
 
 
+        //METÓDOS DOS FORMULÁRIOS
         private void listarClientes()
         {
             tipo = "CLIENTES";
@@ -257,7 +250,70 @@ namespace JanelasMDI
             frmajuda.MdiParent = this;
             frmajuda.Show();
         }
-        
-        
+
+
+
+
+        //ICONES BARRA DE FERRAMENTAS
+        private void tpCadastroCliente_Click(object sender, EventArgs e)
+        {
+            cadastrarClientes();
+        }
+
+        private void tpCadastararAlunos_Click(object sender, EventArgs e)
+        {
+            cadastrarAlunos();
+        }
+
+        private void tpBuscaAlunos_Click(object sender, EventArgs e)
+        {
+            buscaAlunos();
+        }
+
+        private void tpBuscaCliente_Click(object sender, EventArgs e)
+        {
+            buscaClientes();
+        }
+
+        private void tpListarUsuarios_Click(object sender, EventArgs e)
+        {
+            listarUsuarios();
+        }
+
+        private void tpListarAlunos_Click(object sender, EventArgs e)
+        {
+            listarAlunos();
+        }
+
+        private void tpListarClientes_Click(object sender, EventArgs e)
+        {
+            listarClientes();
+        }
+
+        //ajuda
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            ajuda();
+        }
+
+        //fechar programa
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+
+
+        //NÃO ESTÁ EM USO
+        private void agendarAtendimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void visualizarAtendimentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

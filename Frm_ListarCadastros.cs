@@ -21,6 +21,7 @@ namespace JanelasMDI
         {
             InitializeComponent();
         }
+
         public Frm_ListarCadastros(string tipo)
         {
             InitializeComponent();
@@ -47,12 +48,17 @@ namespace JanelasMDI
         }
 
 
-        private void btnVisualizar_Click(object sender, EventArgs e)
-        {
-            
 
+        //BOTÕES
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
-        
+
+
+
+
+        //MÉTODOS
         private void listarAlunos()
         {
             try
@@ -130,9 +136,6 @@ namespace JanelasMDI
             }
         }
 
-        private void picSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+      
     }
 }

@@ -26,6 +26,7 @@ namespace JanelasMDI
             InitializeComponent();
         }
 
+        //INFORMA NÚMERO DO CADASTRO
         private void Frm_AgendarConsulta_Load(object sender, EventArgs e)
         {
             try
@@ -58,12 +59,28 @@ namespace JanelasMDI
             }
         }
 
+
+        //BOTÕES 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             flag = 0;          
             tratamentoDeDados();
         }
 
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLimpar_Click_1(object sender, EventArgs e)
+        {
+            limpa();
+        }
+
+
+
+
+        //MÉTODOS
         private void cadastroAluno()
         {
             try
@@ -102,11 +119,6 @@ namespace JanelasMDI
             {
                 conexao.Close();
             }
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            limpa();
         }
     
         private void limpa()
@@ -223,29 +235,26 @@ namespace JanelasMDI
             }
         }
 
+
+
+        //NÃO ESTÁ EM USO
         private void label7_Click(object sender, EventArgs e)
         {
 
         }
-
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
-
         private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
 
-        private void picSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+   
     }
 }

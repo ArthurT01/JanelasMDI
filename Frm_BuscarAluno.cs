@@ -22,12 +22,8 @@ namespace JanelasMDI
         {
             InitializeComponent();
         }
-
-        private void Frm_BuscarAluno_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        //BOTÕES
         private void btnBuscar_Click(object sender, EventArgs e)
         {
            if(cbTipoBusca.Text == "CÓDIGO ALUNO")
@@ -48,6 +44,15 @@ namespace JanelasMDI
            }
         }
 
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+
+        //MÉTODOS
         private void buscaCódigoAluno()
         {
             try
@@ -232,7 +237,6 @@ namespace JanelasMDI
             }
         }
 
-
         private void buscaDadosCliente()
         {
             try
@@ -273,11 +277,17 @@ namespace JanelasMDI
         }
 
 
+
+
+        //NÂO ESTÁ EM USO
         private void mktBusca_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             
         }
+        private void Frm_BuscarAluno_Load(object sender, EventArgs e)
+        {
 
+        }
         private void cbTipoBusca_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbTipoBusca.Text == "CPF ALUNO" || cbTipoBusca.Text == "CPF CLIENTE")
@@ -290,9 +300,7 @@ namespace JanelasMDI
             }
         }
 
-        private void picSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
+        
     }
 }
