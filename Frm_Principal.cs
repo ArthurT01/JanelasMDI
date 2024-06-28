@@ -43,7 +43,6 @@ namespace JanelasMDI
 
       
         //AJUDA
-
         private void ajudaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ajuda();
@@ -58,7 +57,6 @@ namespace JanelasMDI
 
 
         //JANELA
-
         private void organizarNaHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileHorizontal);
@@ -107,31 +105,13 @@ namespace JanelasMDI
 
 
 
-
-        //NÃO TINHA QUE FAZER
-
-        private void agendarAtendimentoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void visualizarAtendimentosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
         //ADMNISTRAÇÃO
-
-
         private void cadastrarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cadastrarUsers();
         }
 
-        //LISTAR USUÁRIOS
+        //listar usuários
         private void vizualizarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             listarUsuarios();
@@ -140,10 +120,7 @@ namespace JanelasMDI
 
 
 
-
         //SISTEMA
-
-
         private void cadastrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cadastrarClientes();
@@ -174,7 +151,7 @@ namespace JanelasMDI
             buscaAlunos();
         }
 
-        //CADASTRAR ALUNOS
+        //cadastrar alunos
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             cadastrarAlunos();
@@ -313,16 +290,30 @@ namespace JanelasMDI
             listarClientes();
         }
 
-        //AJUDA
+        //ajuda
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             ajuda();
         }
 
-        //FECHAR PROGRAMA
+        //fechar programa
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
+
+
+        //NÃO ESTÁ EM USO
+        private void agendarAtendimentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void visualizarAtendimentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

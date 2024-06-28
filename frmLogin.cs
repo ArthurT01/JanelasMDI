@@ -26,26 +26,8 @@ namespace JanelasMDI
             InitializeComponent();
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkExibirSenha_CheckedChanged(object sender, EventArgs e)
-        {
-            if (txtSenha.Text != "Digite sua senha")
-            {
-                if (chkExibirSenha.Checked)
-                {
-                    txtSenha.PasswordChar = default;
-                }
-                else
-                {
-                    txtSenha.PasswordChar = '*';
-                }
-            }
-        }
-
+         
+        //BOTÕES 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
 
@@ -93,6 +75,14 @@ namespace JanelasMDI
             }
         }
 
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+
+        //CRIPTOGRAFIA DE SENHA
         public void CriptografaDados()
         {
             Criptografia c = new Criptografia(SHA512.Create());
@@ -101,10 +91,33 @@ namespace JanelasMDI
 
         }
 
-        private void picSair_Click(object sender, EventArgs e)
+
+
+        //EXIBIR SENHA
+        private void chkExibirSenha_CheckedChanged(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (txtSenha.Text != "Digite sua senha")
+            {
+                if (chkExibirSenha.Checked)
+                {
+                    txtSenha.PasswordChar = default;
+                }
+                else
+                {
+                    txtSenha.PasswordChar = '*';
+                }
+            }
         }
+        
+
+
+        //NÃO ESTÁ EM USO
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 
 }

@@ -39,9 +39,9 @@
             // dtListarCadastros
             // 
             this.dtListarCadastros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtListarCadastros.Location = new System.Drawing.Point(0, -5);
+            this.dtListarCadastros.Location = new System.Drawing.Point(-3, -3);
             this.dtListarCadastros.Name = "dtListarCadastros";
-            this.dtListarCadastros.Size = new System.Drawing.Size(801, 363);
+            this.dtListarCadastros.Size = new System.Drawing.Size(806, 363);
             this.dtListarCadastros.TabIndex = 0;
             // 
             // label1
@@ -58,7 +58,7 @@
             // 
             this.picSair.BackColor = System.Drawing.Color.White;
             this.picSair.Image = ((System.Drawing.Image)(resources.GetObject("picSair.Image")));
-            this.picSair.Location = new System.Drawing.Point(6, 408);
+            this.picSair.Location = new System.Drawing.Point(12, 393);
             this.picSair.Name = "picSair";
             this.picSair.Size = new System.Drawing.Size(34, 31);
             this.picSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -17,9 +17,12 @@ namespace JanelasMDI
             InitializeComponent();
         }
 
+
+        //BOTÕES
         private void picSair_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }

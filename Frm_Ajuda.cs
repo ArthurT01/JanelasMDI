@@ -17,6 +17,8 @@ namespace JanelasMDI
             InitializeComponent();
         }
 
+
+        //BOTÕES
         private void btnBusca_Click(object sender, EventArgs e)
         {
             if(cbEscolha.Text == "Formulário de Cadastro de Alunos")

@@ -25,22 +25,8 @@ namespace JanelasMDI
             InitializeComponent();
         }
 
-        private void Frm_CadastrarUsuario_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
+        //BOTÕES 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             try
@@ -71,6 +57,15 @@ namespace JanelasMDI
             }
         }
 
+        private void picSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+
+        //CRIPTOGRAFIA DE SENHA
         public void CriptografaDados()
         {
             Criptografia c = new Criptografia(SHA512.Create());
@@ -79,9 +74,22 @@ namespace JanelasMDI
            
         }
 
-        private void picSair_Click(object sender, EventArgs e)
+        
+
+
+        //NÃO ESTÁ EM USO
+        private void Frm_CadastrarUsuario_Load(object sender, EventArgs e)
         {
-            this.Close();
+
         }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
