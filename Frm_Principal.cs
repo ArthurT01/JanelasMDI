@@ -138,7 +138,7 @@ namespace JanelasMDI
         {
             foreach (Form f in this.MdiChildren)
             {
-                f.WindowState = FormWindowState.Minimized;
+                f.WindowState = FormWindowState.Maximized;
             }
         }
 
