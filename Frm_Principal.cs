@@ -296,6 +296,11 @@ namespace JanelasMDI
             ajuda();
         }
 
+        private void tpSobre_Click(object sender, EventArgs e)
+        {
+            sobre();
+        }
+
         //fechar programa
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
@@ -314,6 +319,18 @@ namespace JanelasMDI
         {
 
         }
+        private void Frm_Principal_Load(object sender, EventArgs e)
+        {
 
+        }
+        private void tpNomeUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exibirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

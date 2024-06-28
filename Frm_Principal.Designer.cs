@@ -74,6 +74,9 @@
             this.tpListarUsuarios = new System.Windows.Forms.ToolStripButton();
             this.tpListarAlunos = new System.Windows.Forms.ToolStripButton();
             this.tpListarClientes = new System.Windows.Forms.ToolStripButton();
+            this.tpSobre = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -261,7 +264,7 @@
             // 
             this.organizarNaVerticalToolStripMenuItem.Name = "organizarNaVerticalToolStripMenuItem";
             this.organizarNaVerticalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.organizarNaVerticalToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.organizarNaVerticalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.organizarNaVerticalToolStripMenuItem.Text = " Vertical";
             this.organizarNaVerticalToolStripMenuItem.Click += new System.EventHandler(this.organizarNaVerticalToolStripMenuItem_Click);
             // 
@@ -269,7 +272,7 @@
             // 
             this.organizarNaHorizontalToolStripMenuItem.Name = "organizarNaHorizontalToolStripMenuItem";
             this.organizarNaHorizontalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.organizarNaHorizontalToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.organizarNaHorizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.organizarNaHorizontalToolStripMenuItem.Text = " Horizontal";
             this.organizarNaHorizontalToolStripMenuItem.Click += new System.EventHandler(this.organizarNaHorizontalToolStripMenuItem_Click);
             // 
@@ -277,20 +280,20 @@
             // 
             this.organizarEmCascataToolStripMenuItem.Name = "organizarEmCascataToolStripMenuItem";
             this.organizarEmCascataToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.organizarEmCascataToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.organizarEmCascataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.organizarEmCascataToolStripMenuItem.Text = "Em Cascata";
             this.organizarEmCascataToolStripMenuItem.Click += new System.EventHandler(this.organizarEmCascataToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(174, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
             // 
             // mInimizarTodasAsJanelasToolStripMenuItem
             // 
             this.mInimizarTodasAsJanelasToolStripMenuItem.Name = "mInimizarTodasAsJanelasToolStripMenuItem";
             this.mInimizarTodasAsJanelasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.mInimizarTodasAsJanelasToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.mInimizarTodasAsJanelasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mInimizarTodasAsJanelasToolStripMenuItem.Text = "Minimizar";
             this.mInimizarTodasAsJanelasToolStripMenuItem.Click += new System.EventHandler(this.mInimizarTodasAsJanelasToolStripMenuItem_Click);
             // 
@@ -298,14 +301,14 @@
             // 
             this.maximizarTodasAsJanelasToolStripMenuItem.Name = "maximizarTodasAsJanelasToolStripMenuItem";
             this.maximizarTodasAsJanelasToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F2)));
-            this.maximizarTodasAsJanelasToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.maximizarTodasAsJanelasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.maximizarTodasAsJanelasToolStripMenuItem.Text = "Maximizar";
             this.maximizarTodasAsJanelasToolStripMenuItem.Click += new System.EventHandler(this.maximizarTodasAsJanelasToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(174, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // ajudaToolStripMenuItem
             // 
@@ -346,6 +349,7 @@
             this.tpNomeUsuario.Name = "tpNomeUsuario";
             this.tpNomeUsuario.ReadOnly = true;
             this.tpNomeUsuario.Size = new System.Drawing.Size(100, 23);
+            this.tpNomeUsuario.Click += new System.EventHandler(this.tpNomeUsuario_Click);
             // 
             // exibirToolStripMenuItem
             // 
@@ -354,6 +358,7 @@
             this.exibirToolStripMenuItem.Name = "exibirToolStripMenuItem";
             this.exibirToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
             this.exibirToolStripMenuItem.Text = "Exibir";
+            this.exibirToolStripMenuItem.Click += new System.EventHandler(this.exibirToolStripMenuItem_Click);
             // 
             // ocultarBarraDeFerramentasToolStripMenuItem
             // 
@@ -368,15 +373,18 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tpCadastrarUsuarios,
+            this.tpListarUsuarios,
             this.toolStripButton1,
             this.toolStripButton5,
-            this.tpCadastararAlunos,
+            this.toolStripSeparator2,
             this.tpCadastroCliente,
-            this.tpBuscaAlunos,
             this.tpBuscaCliente,
-            this.tpListarUsuarios,
+            this.tpListarClientes,
+            this.toolStripSeparator8,
+            this.tpCadastararAlunos,
+            this.tpBuscaAlunos,
             this.tpListarAlunos,
-            this.tpListarClientes});
+            this.tpSobre});
             this.toolStrip1.Location = new System.Drawing.Point(0, 27);
             this.toolStrip1.Margin = new System.Windows.Forms.Padding(2);
             this.toolStrip1.Name = "toolStrip1";
@@ -506,6 +514,27 @@
             this.tpListarClientes.Text = "toolStripButton4";
             this.tpListarClientes.Click += new System.EventHandler(this.tpListarClientes_Click);
             // 
+            // tpSobre
+            // 
+            this.tpSobre.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tpSobre.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tpSobre.Image = ((System.Drawing.Image)(resources.GetObject("tpSobre.Image")));
+            this.tpSobre.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tpSobre.Name = "tpSobre";
+            this.tpSobre.Size = new System.Drawing.Size(34, 41);
+            this.tpSobre.Text = "toolStripButton2";
+            this.tpSobre.Click += new System.EventHandler(this.tpSobre_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 44);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 44);
+            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,6 +549,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de atendimento";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -576,6 +606,9 @@
         private System.Windows.Forms.ToolStripButton tpListarUsuarios;
         private System.Windows.Forms.ToolStripButton tpListarAlunos;
         private System.Windows.Forms.ToolStripButton tpListarClientes;
+        private System.Windows.Forms.ToolStripButton tpSobre;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
     }
 }
 
